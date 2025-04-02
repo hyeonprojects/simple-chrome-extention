@@ -50,6 +50,30 @@ module.exports = {
     "no-implied-eval": "error", // new Function(), setTimeout(string), setInterval(string) 등 사용 금지
     "no-console": "off", // 백그라운드 스크립트에서는 console 허용 (development에서만)
     
+    // XSS 방지 관련 규칙
+    "no-unsanitized/method": "error", // innerHTML 등의 안전하지 않은 DOM 조작 방지
+    "no-unsanitized/property": "error",
+
+    // 접근성 관련 규칙
+    "jsx-a11y/alt-text": "warn", // 이미지에 alt 텍스트 필요
+    "jsx-a11y/aria-props": "error", 
+    "jsx-a11y/aria-role": "error",
+
+    // 크롬 API 최적화 규칙
+    "@typescript-eslint/no-unnecessary-type-assertion": "warn", // 크롬 API 타입 관련
+    "promise/catch-or-return": "warn", // 크롬 API는 대부분 Promise 반환
+    "promise/no-nesting": "warn", // Promise 중첩 방지
+
+    // Manifest V3 제한 사항 관련
+    "no-restricted-globals": ["error", "localStorage", "sessionStorage"], // service worker에서 사용 불가
+    "no-restricted-syntax": [
+      "error",
+      {
+        "selector": "CallExpression[callee.object.name='chrome'][callee.property.name='gcm']", 
+        "message": "chrome.gcm is not available in Manifest V3"
+      }
+    ],
+
     // 모듈화 관련
     "import/no-unresolved": "error",
     "import/named": "error",
