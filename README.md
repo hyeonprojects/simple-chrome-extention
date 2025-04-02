@@ -1,99 +1,66 @@
-# Chrome Extension Project
+# Chrome Extension Template (크롬 익스텐션 기본 템플릿)
 
-A browser extension that enhances your Chrome experience.
+이 프로젝트는 크롬 확장 프로그램 개발을 위한 기본 템플릿입니다. TypeScript와 Vite를 기반으로 하여 현대적인 개발 환경을 제공합니다.
 
-## 📝 Description
+## 특징
 
-This Chrome extension provides useful functionality to improve your browsing experience.
+- TypeScript를 사용한 타입 안전성 보장
+- Vite를 활용한 빠른 개발 및 빌드 환경
+- ESLint 및 Prettier를 통한 코드 품질 관리
+- 크롬 확장 프로그램 개발에 필요한 기본 설정 포함
 
-## ✨ Features
+## 기술 스택
 
-- Feature 1: Description of the first feature
-- Feature 2: Description of the second feature
-- Feature 3: Description of the third feature
+- TypeScript
+- Vite
+- CRXJS Vite Plugin (크롬 확장 프로그램 빌드 지원)
+- ESLint & Prettier
 
-## 🔧 Installation
+## 시작하기
 
-1. Clone this repository or download as ZIP
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the extension directory
-5. The extension should now appear in your browser toolbar
+### 요구 사항
 
-## 🚀 Usage
+- Node.js (최신 LTS 버전 권장)
+- pnpm
 
-1. Click the extension icon in the toolbar
-2. [Include specific usage instructions]
-3. [Include screenshots if helpful]
-
-## 💻 Development
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
-
-### Setup
-
-```bash
-# Install dependencies
-npm install
-
-# Build the extension
-npm run build
-```
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
----
-
-# Chrome Extension 프로젝트
-
-크롬 브라우저 경험을 향상시키는 확장 프로그램입니다.
-
-## 📝 설명
-
-이 크롬 확장 프로그램은 브라우징 경험을 개선하는 유용한 기능을 제공합니다.
-
-## ✨ 기능
-
-- 기능 1: 첫 번째 기능에 대한 설명
-- 기능 2: 두 번째 기능에 대한 설명
-- 기능 3: 세 번째 기능에 대한 설명
-
-## 🔧 설치 방법
-
-1. 이 저장소를 클론하거나 ZIP으로 다운로드하세요
-2. 크롬을 열고 `chrome://extensions/`로 이동하세요
-3. 오른쪽 상단의 "개발자 모드"를 활성화하세요
-4. "압축해제된 확장 프로그램 로드"를 클릭하고 확장 프로그램 디렉토리를 선택하세요
-5. 확장 프로그램이 브라우저 툴바에 나타납니다
-
-## 🚀 사용 방법
-
-1. 툴바에서 확장 프로그램 아이콘을 클릭하세요
-2. [구체적인 사용 지침 포함]
-3. [필요한 경우 스크린샷 포함]
-
-## 💻 개발
-
-### 필수 조건
-
-- [Node.js](https://nodejs.org/)
-- [npm](https://www.npmjs.com/)
-
-### 설정
+### 설치
 
 ```bash
 # 의존성 설치
-npm install
-
-# 확장 프로그램 빌드
-npm run build
+pnpm install
 ```
 
-## 📄 라이센스
+### 개발
 
-이 프로젝트는 MIT 라이센스 하에 제공됩니다 - 자세한 내용은 LICENSE 파일을 참조하세요.
+```bash
+# 개발 모드 실행
+pnpm dev
+```
+
+### 빌드
+
+```bash
+# 프로덕션 빌드
+pnpm build
+```
+
+## 사용 방법
+
+1. `pnpm build` 명령으로 프로젝트를 빌드합니다.
+2. 크롬 브라우저에서 `chrome://extensions/` 페이지로 이동합니다.
+3. 우측 상단의 "개발자 모드"를 활성화합니다.
+4. "압축해제된 확장 프로그램 로드" 버튼을 클릭합니다.
+5. 빌드된 `dist` 디렉토리를 선택합니다.
+
+## 스크립트 명령어
+
+- `pnpm dev` - 개발 서버 실행
+- `pnpm build` - 프로덕션용 빌드
+- `pnpm preview` - 빌드된 결과물 미리보기
+- `pnpm lint` - ESLint로 코드 검사
+- `pnpm lint:fix` - ESLint로 코드 문제 자동 수정
+- `pnpm format` - Prettier로 코드 서식 정리
+
+## 커스터마이징
+
+이 템플릿을 기반으로 원하는 크롬 확장 프로그램을 개발하세요. `manifest.json` 파일과 소스 코드를 수정하여 필요한 기능을 구현할 수 있습니다.
